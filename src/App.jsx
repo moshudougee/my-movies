@@ -111,7 +111,7 @@ const App = () => {
     <main>
       <div className="pattern"/>
 
-      <div className="wrapper">
+      <div className="wrapper overflow-x-hidden overflow-y-auto custom-scrollbar">
         <header>
           <img src="./hero.png" alt="Hero Banner" />
           <h1>Find <span className="text-gradient">Movies</span> You&apos;ll Enjoy Without the Hassle</h1>

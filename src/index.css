@@ -36,7 +36,7 @@
   }
 
   main {
-    @apply min-h-screen relative bg-primary;
+    @apply min-h-screen relative bg-primary overflow-y-auto overflow-x-hidden;
   }
 
   header {
@@ -46,6 +46,25 @@
   header img {
     @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
   }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(22, 22, 22, 0.57);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5e5f5e;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2b2a2a;
 }
 
 @layer components {
@@ -154,6 +173,7 @@
 
     & .main {
       @apply bg-black/80 p-8 my-10 rounded-lg shadow-lg w-screen h-screen md:w-[600px] md:min-h-[500px] relative;
+      @apply transform transition-transform duration-300 scale-95;
     }
 
     & .button {
@@ -180,3 +200,5 @@
     display: none;
   }
 }
+
+
